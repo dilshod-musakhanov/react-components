@@ -6,9 +6,9 @@ import Button from "./components/Button/Button";
 const App = () => {
     return (
         <div>
-            <Button mode="primary">Primary</Button>
-            <Button mode="secondary">Secondary</Button>
-            <Button mode="success">Success</Button>
+            <Button mode="primary" size="normal">Primary</Button>
+            <Button mode="secondary" size="large">Secondary</Button>
+            <Button mode="success" size="small">Success</Button>
         </div>
     )
 };
