@@ -7,7 +7,7 @@ const App = () => {
         <div>
             <Button mode="primary" size="normal">Primary</Button>
             <Button mode="secondary" size="large">Secondary</Button>
-            <Button mode="success" size="small" disabled>Success</Button>
+            <Button mode="success" size="small" className="someClass" disabled>Success</Button>
         </div>
     )
 };
