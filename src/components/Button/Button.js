@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const Button = (prop) => {
-    const text =prop.text;
-
+//we use destructive method to extract property(text) from object (prop)
+//and bind it to variable
+const Button = ({text}) => {
     return <button>{text}</button>;
 };
 
