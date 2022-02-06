@@ -3,23 +3,8 @@ import "./style.css";
 
 const Button = ({children, mode}) => {
     let className = "";
-
-    switch (mode) {
-        case "secondary": {
-            className = "Button--secondary";
-            break;
-        }
-        case "success": {
-            className = "Button--success";
-            break;
-        }
-        case "primary": {
-            className = "Button--primary";
-            break;
-        }
-        default: {
-            break;
-        }
+    if (mode) {
+        className = `Button--${mode}`
     }
     return <button className={`Button ${className}`}>{children}</button>;
 };
