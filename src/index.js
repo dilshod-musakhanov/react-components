@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Button from "./components/Button/Button";
 import ButtonGroup from "./components/ButtonGroup/ButtonGroup";
+import Progress from "./components/Progress/Progress";
 
 
 const App = () => {
@@ -13,12 +14,14 @@ const App = () => {
             <Button mode="success" size="small" className="someClass" disabled>Success</Button>
             <Button counter={5}>Counter</Button>
             */}
-            <ButtonGroup>
+            {/*
+                <ButtonGroup>
                 <Button>Left</Button>
                 <Button>Middle</Button>
                 <Button>Right</Button>
-            </ButtonGroup>
-
+                </ButtonGroup>
+            */}
+            <Progress percent= {50}/>
         </div>
     )
 };
