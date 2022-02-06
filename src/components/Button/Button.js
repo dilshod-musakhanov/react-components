@@ -4,7 +4,12 @@ import classnames from "classnames";
 
 import "./style.css";
 
-const Button = ({children, mode, size}) => {
+//using spread operator will help us to add some additional props
+//if we forgot to include it like now we add disabled
+//but using ...props at the end or at the beginning of the line code will give different results
+//it may override the old props
+
+const Button = ({children, mode, size, ...props}) => {
     const className = classnames(
         'Button',
         {
@@ -12,7 +17,7 @@ const Button = ({children, mode, size}) => {
             [`Button--${size}`]: Boolean(size)
         }
     )
-    return <button className={className}>{children}</button>;
+    return <button className={className} {...props}>{children}</button>;
 }
 
 Button.defaultProps = {
