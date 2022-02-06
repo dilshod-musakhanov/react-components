@@ -8,6 +8,7 @@ const App = () => {
             <Button mode="primary" size="normal">Primary</Button>
             <Button mode="secondary" size="large">Secondary</Button>
             <Button mode="success" size="small" className="someClass" disabled>Success</Button>
+            <Button counter={5}>Counter</Button>
         </div>
     )
 };
