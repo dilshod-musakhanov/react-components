@@ -1,18 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 import "./style.css"
 
-//we run through each element in children
-//and clone it and return it by adding className 'ButtonGroup__item' to each child
 const ButtonGroup = ({children}) => {
+    const [activeButtonIndex, setActiveButtonIndex] = useState(1);
     return (
-        <div
-            className="ButtonGroup">
-            {React.Children.map(children,(child) => (
+        <div className="ButtonGroup">
+            {React.Children.map(children,(child, i) => (
                 React.cloneElement(
                     child,
-                    {className: 'ButtonGroup__item'}
+                    {
+                        className: classnames('ButtonGroup__item', {'ButtonGroup__item--active': activeButtonIndex === i}),
+                        onClick: () => {
+                            setActiveButtonIndex(i);
+                            console.log(activeButtonIndex);
+                        }
+                    }
                 )
             ))}
         </div>
@@ -26,5 +31,3 @@ ButtonGroup.propTypes = {
 
 export default ButtonGroup;
 
-//in order to add new element to children use React.cloneElement
-//as it will work even though you have one child only
