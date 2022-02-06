@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import Button from "./components/Button/Button";
 import ButtonGroup from "./components/ButtonGroup/ButtonGroup";
@@ -6,6 +6,18 @@ import Progress from "./components/Progress/Progress";
 
 
 const App = () => {
+    const [percent, setPercent] = useState(0);
+
+    const interval = setInterval(() => {
+        if (percent >= 100) {
+            setPercent(100);
+            clearInterval(interval);
+        } else {
+            setPercent(percent +10);
+        }
+        clearInterval(interval);
+    }, 1000);
+
     return (
         <div>
             {/*
@@ -21,7 +33,7 @@ const App = () => {
                 <Button>Right</Button>
                 </ButtonGroup>
             */}
-            <Progress percent= {50}/>
+            <Progress percent= {percent}/>
         </div>
     )
 };
