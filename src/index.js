@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Button from "./components/Button/Button";
+
 
 const App = () => {
-    return <h1>Hi, I am component</h1>
+    return (
+        <div>
+            <Button text="Button 1"></Button>
+            <Button text="Button 2"></Button>
+            <Button text="Button 3"></Button>
+        </div>
+    )
 };
 
 ReactDOM.render(

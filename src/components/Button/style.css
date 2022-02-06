@@ -1,0 +1,32 @@
+.Button {
+    margin: 4px;
+    padding: 4px 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.Button--normal {
+    font-size: 18px;
+}
+.Button--small {
+    font-size: 10px;
+}
+.Button--large {
+    font-size: 28px;
+}
+
+.Button--primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.Button--secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+.Button--success {
+    background-color: #198754;
+    border-color: #198754;
+}
