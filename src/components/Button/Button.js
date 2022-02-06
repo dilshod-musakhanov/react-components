@@ -1,13 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classnames from "classnames";
 
 import "./style.css";
 
 const Button = ({children, mode, size}) => {
-    let className = "";
-    className += ` Button--${mode}`;
-    className += ` Button--${size}`;
-    return <button className={`Button${className}`}>{children}</button>;
+    const className = classnames(
+        'Button',
+        {
+            [`Button--${mode}`]: Boolean(mode),
+            [`Button--${size}`]: Boolean(size)
+        }
+    )
+    return <button className={className}>{children}</button>;
 }
 
 Button.defaultProps = {
